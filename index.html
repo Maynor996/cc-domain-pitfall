@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我上了 20 多个视频模板站几乎没收益，复盘下来：.cc 域名是个大坑</title>
+<meta name="description" content="做新词新站的人，最爱干一件事：便宜域名一口气囤一批，站先上了再说。 我这边视频模板站，有一批就踩在 .cc 上。结果很扎心——二十多个站挂上去，几乎没有像样的收益；同时 Google Search Console 里 sitemap 提交、抓取也反复出问题。后来对照哥飞社区里的实践结论，才把「后缀随便挑」这件事彻底纠正">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
+<style>
+
+  :root {
+    --bg: #f7f5f0;
+    --card: #ffffff;
+    --text: #1a1a1a;
+    --muted: #5c5c5c;
+    --accent: #1a73e8;
+    --border: #e6e2d8;
+    --code-bg: #f0eee8;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 17px;
+    line-height: 1.85;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+  }
+  article {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem 1.75rem 2.5rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+  }
+  h1 {
+    font-family: "Noto Serif SC", "Noto Sans SC", serif;
+    font-size: clamp(1.55rem, 4vw, 2rem);
+    line-height: 1.4;
+    margin: 0 0 1.25rem;
+    font-weight: 700;
+  }
+  h2 {
+    font-family: "Noto Serif SC", "Noto Sans SC", serif;
+    font-size: 1.35rem;
+    margin: 2.25rem 0 0.9rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
+    font-weight: 700;
+  }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  h3 { font-size: 1.1rem; margin: 1.5rem 0 0.6rem; }
+  p { margin: 0.9rem 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul, ol { padding-left: 1.35rem; margin: 0.8rem 0; }
+  li { margin: 0.35rem 0; }
+  strong { font-weight: 700; }
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.1rem auto 0.35rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #fafafa;
+  }
+  .caption {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-top: 0.2rem;
+    margin-bottom: 1.2rem;
+  }
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    overflow-x: auto;
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9em;
+    background: var(--code-bg);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+  }
+  pre code { background: none; padding: 0; }
+  blockquote {
+    margin: 1rem 0;
+    padding: 0.2rem 0 0.2rem 1rem;
+    border-left: 3px solid var(--accent);
+    color: var(--muted);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 0.55rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #f3f1eb; }
+  .meta {
+    color: var(--muted);
+    font-size: 0.92rem;
+    margin-bottom: 1.5rem;
+  }
+  .pages-banner {
+    margin: 0 0 1.25rem;
+    padding: 0.75rem 1rem;
+    background: #eef5ff;
+    border: 1px solid #d0e2ff;
+    border-radius: 10px;
+    font-size: 0.95rem;
+  }
+  footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.88rem;
+  }
+
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <article>
+      <div class="pages-banner">在线阅读（GitHub Pages）：<a href="https://maynor996.github.io/cc-domain-pitfall/">https://maynor996.github.io/cc-domain-pitfall/</a></div>
+      <h1>我上了 20 多个视频模板站几乎没收益，复盘下来：.cc 域名是个大坑</h1>
+      <div class="meta">原文：<a href="https://blog.csdn.net/xianyu120/article/details/169163956">https://blog.csdn.net/xianyu120/article/details/169163956</a></div>
+      <p>做新词新站的人，最爱干一件事：<strong>便宜域名一口气囤一批，站先上了再说</strong>。</p>
+<p>我这边视频模板站，有一批就踩在 <strong>.cc</strong> 上。结果很扎心——<strong>二十多个站挂上去，几乎没有像样的收益</strong>；同时 Google Search Console 里 sitemap 提交、抓取也反复出问题。后来对照哥飞社区里的实践结论，才把「后缀随便挑」这件事彻底纠正过来。</p>
+<p>这篇文章把踩坑过程、社区里的硬证据，以及现在怎么选后缀，一次性说清楚。<strong>具体站名和完整域名一律不写</strong>，只讲后缀与现象。</p>
+<hr />
+<h2>先把两件事拆开</h2>
+<p>很多人一听「.cc 不好」，就理解成「Google 算法专门惩罚 .cc」。</p>
+<p>更准确的说法是：</p>
+<ol>
+<li><strong>后缀本身对 SEO 的影响通常很小</strong>——标题、内容、外链、产品本身，权重远高于后缀字母；  </li>
+<li><strong>但某些便宜后缀在实操里会被点名避开</strong>——不是玄学，而是 <strong>GSC sitemap / 抓取、外链兼容、垃圾站密度</strong> 这类可复现问题。</li>
+</ol>
+<p>所以：<strong>.cc ≠ 一定被算法封杀</strong>；<strong>.cc ≈ 新站抢速度时不该赌的那一类后缀</strong>。</p>
+<hr />
+<h2>哥飞社区对后缀的总体判断</h2>
+<p>2023 年前后群里就有过讨论：后缀关系不大。到了 2026-10-15 那篇数据文，观点被量化了：2025.05–2026.08 共 14 届新词新站月赛前 20 名、278 个网站、37 种后缀——<strong>「后缀的影响微乎其微，还不如好好写好网页标题」</strong>；前 20 名里 <code>.com</code>、<code>.org</code>、<code>.net</code>、<code>.app</code>、<code>.ai</code>、<code>.io</code> 这 6 个主流后缀合计约占 <strong>77%</strong>。</p>
+<p>原文：<a href="https://new.web.cafe/topic/axf2n642sy">域名后缀怎么选？14 届比赛前 20 名的数据告诉你</a></p>
+<p>优先级很清楚：</p>
+<blockquote>
+<p>有 <code>.com</code> 就用 <code>.com</code>；没有就 <code>.org</code> / <code>.net</code> / <code>.app</code>；别为了抢后缀耽误上站。</p>
+</blockquote>
+<hr />
+<h2>但 .cc 被明确点名：归入「垃圾后缀」那一拨</h2>
+<p>2026-04-02，有人问：是不是大家都用 <code>.com</code>，其他后缀有没有影响？</p>
+<p>哥飞的回答很直：</p>
+<blockquote>
+<p>只要不是 <code>.xyz</code>、<code>.cc</code>、<code>.dk</code> 等垃圾后缀就行。</p>
+</blockquote>
+<p>紧接着列了可用方向：<code>.com</code>、<code>.ai</code>、<code>.net</code>、<code>.io</code>、<code>.app</code>、<code>.org</code>、<code>.me</code>、<code>.im</code> 等，都有人用、也能拿到流量。</p>
+<p><strong>注意：.cc 不在可接受名单里。</strong></p>
+<p>社区整理里也常把这段和后面的 GSC 问题放在一起看：</p>
+<p><img alt="哥飞社区实践：.cc 被归入垃圾后缀，且 GSC sitemap 易卡住" src="imgs/01.png" /></p>
+<hr />
+<h2>具体坑：GSC 提交 sitemap 会卡住</h2>
+<p>这是我自己感触最深的一层，也和群里多次踩坑高度重合。</p>
+<p>2026-05-07，有人反馈：sitemap 用 curl、浏览器、Bing 都能正常打开，<strong>唯独 Google Search Console 过不去</strong>。哥飞直接回：</p>
+<blockquote>
+<p>域名后缀不行，没办法。</p>
+</blockquote>
+<p>对方确认用的就是 <strong>.cc</strong>。群里多人附和：「cc 不行，我也有一个」「xyz、click、cc 都不行」；也有人说手动提交偶尔能收首页，但抓取仍别扭。有人站都已经「出词」了，还是果断换域名。</p>
+<p>我这边视频模板站批量用 <code>.cc</code> 时，表现高度类似：</p>
+<ul>
+<li>站能打开、内容也做了；  </li>
+<li><strong>GSC 侧 sitemap / 抓取反复不顺</strong>；  </li>
+<li>二十多个站堆上去，<strong>几乎看不到像样收益</strong>。</li>
+</ul>
+<p>当然，没收益不可能只怪后缀——产品、关键词、外链、页面质量都要背锅。但当「内容与提交动作都做了，GSC 却像堵墙」时，<strong>.cc 会把问题放大成系统性卡点</strong>，特别耽误新词站抢收录窗口。</p>
+<hr />
+<h2>还有一层：外链与老系统兼容性</h2>
+<p>2026-06-28 的经验帖提到：代提交外链时，很多老旧博客 / 论坛 / BBS <strong>不认新兴后缀</strong>——<code>.com</code>、<code>.net</code> 能正常解析成 <code>&lt;a&gt;</code>，而 <code>.ai</code>、<code>.gg</code>、<code>.app</code>、<code>.video</code> 一类经常解析失败（系统没升级）。</p>
+<p>原文：<a href="https://new.web.cafe/topic/girwjv2jl4">尽量不要注册个性域名后缀……</a></p>
+<p><code>.cc</code> 属于同一类风险：你以为铺了外链，对方系统可能根本没给你链出去。对靠外链启动的站，这是隐性损耗。</p>
+<hr />
+<h2>别把 .online / .top 当「安全平替」</h2>
+<p>之前有人把 <code>.online</code>、<code>.top</code> 说成「可以」，出处其实是群友个人经验，不是哥飞结论。</p>
+<p>同一篇 2026-10-15 数据文里，哥飞写明要避开太便宜的后缀：<strong>.xyz、.top、.online、.site</strong>（同类语境里 <code>.shop</code> 也常被点到）——垃圾站用得多，优化更难。</p>
+<p><code>.click</code> 更有实锤：2025-06 就有人强烈避雷——练手站 GSC sitemap 无法抓取、Bing 也难交内页；2026-05 讨论里又有人总结「xyz、click、cc 都不行」。</p>
+<p><strong>省几块钱后缀费，换来收录窗口丢掉几天，对新词站往往更贵。</strong></p>
+<hr />
+<h2>我自己的复盘结论（视频模板站）</h2>
+<p>结合亲身批次 + 社区证据，我现在的纪律是：</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>新站选域名</strong></td>
+<td>直接跳过 <code>.cc</code>；优先 <code>.com</code> / <code>.org</code> / <code>.net</code> / <code>.app</code> / <code>.ai</code> / <code>.io</code></td>
+</tr>
+<tr>
+<td><strong>已经出词的老 .cc</strong></td>
+<td>可以继续跑数据，但别再加仓同后缀；卡 GSC 就评估迁域名成本</td>
+</tr>
+<tr>
+<td><strong>批量视频模板 / 新词站</strong></td>
+<td>后缀统一走主流；批量上站时后缀选错 = 批量踩同一坑</td>
+</tr>
+<tr>
+<td><strong>图便宜</strong></td>
+<td><code>.app</code> 常比 <code>.com</code> 友好；<code>.me</code> 群里也有人说能用。别为了再省一点滑向 <code>.cc</code> / <code>.xyz</code> / <code>.click</code> / <code>.online</code></td>
+</tr>
+</tbody>
+</table>
+<p>四五十块买 <code>.com</code>，在 2026 年并不算贵；真要比价可以用 <a href="https://namebeta.com/">namebeta.com</a>、<a href="https://query.domains/">query.domains</a> 等，Spaceship / Namecheap 也常被提到——但那是另一篇文章的事。<strong>后缀选错，比价再狠也救不了 GSC。</strong></p>
+<hr />
+<hr />
+<h2>选域名时：用 query.domains 一次看清可注册后缀</h2>
+<p>图便宜乱买 <code>.cc</code> 之前，先把候选词丢进 <a href="https://query.domains/">query.domains</a>：可以<strong>一次性查看</strong>各后缀是否还能注册，以及常见后缀列表（<code>.com</code>、<code>.app</code>、<code>.io</code>、<code>.me</code>、<code>.org</code>、<code>.net</code> 等），比开十几家注册商挨个搜省事。</p>
+<p><img alt="query.domains 可一次查看多后缀是否可注册" src="imgs/02.png" /></p>
+<p>避开 <code>.cc</code> / <code>.xyz</code> / <code>.click</code> 这类高风险后缀时，用这个工具先把「还能注册什么」扫一遍，再决定下单哪家平台。</p>
+<hr />
+<h2>一句话总结</h2>
+<ul>
+<li>后缀不是 SEO 的决定因素，但 <strong><code>.cc</code> 在哥飞社区实践里被明确点名避开</strong>。  </li>
+<li>高频实操问题是：<strong>GSC sitemap / 抓取卡住</strong>，外链老系统也不友好。  </li>
+<li>我这边 <strong>20+ 个视频模板站几乎没收益</strong>，复盘里 <code>.cc</code> 是重要原因之一（不是唯一原因）。  </li>
+<li><strong>新站别赌 .cc</strong>；已经出词的再看数据决定迁不迁。</li>
+</ul>
+<p>如果你也在批量上站，先检查后缀有没有掉进 <code>.cc</code> / <code>.xyz</code> / <code>.click</code> / <code>.online</code> 这类名单——站可以再做一个，<strong>收录窗口错过了就回不来</strong>。</p>
+<hr />
+<h3>参考</h3>
+<ol>
+<li><a href="https://new.web.cafe/topic/axf2n642sy">域名后缀怎么选？14 届比赛前 20 名的数据告诉你</a>  </li>
+<li><a href="https://new.web.cafe/topic/girwjv2jl4">外链经验：尽量不要注册个性域名后缀</a>  </li>
+<li>哥飞社区群聊实践整理（2026-04-02 / 2026-05-07 等关于垃圾后缀与 GSC 的讨论）</li>
+</ol>
+      <footer>镜像自 CSDN @xianyu120 · 内容以原文为准</footer>
+    </article>
+  </div>
+</body>
+</html>
